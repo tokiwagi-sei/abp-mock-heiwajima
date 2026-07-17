@@ -49,5 +49,49 @@
     { "icon": "sparkle", "title": "SNS投稿", "description": "Instagram・X投稿の作成依頼", "toast": "SNS投稿依頼フォームは準備中の機能です" },
     { "icon": "megaphone", "title": "広告素材作成", "description": "画像・動画・コピー生成の依頼", "toast": "広告素材生成は準備中の機能です" },
     { "icon": "document", "title": "DM作成", "description": "紙面DM・デジタルDMの依頼", "toast": "DM作成依頼フォームは準備中の機能です" }
+  ],
+  "snsPosts": [
+    {
+      "id": "post-1",
+      "title": "優勝戦直前告知投稿",
+      "platforms": ["X", "Instagram"],
+      "scheduledAt": "7/12 18:00",
+      "status": "pending"
+    },
+    {
+      "id": "post-2",
+      "title": "選手インタビュー動画の告知",
+      "platforms": ["YouTube"],
+      "scheduledAt": "7/13 10:00",
+      "status": "draft"
+    },
+    {
+      "id": "post-3",
+      "title": "ナイターライブ開催告知",
+      "platforms": ["X", "Instagram", "LINE"],
+      "scheduledAt": "7/10 12:00",
+      "status": "approved"
+    },
+    {
+      "id": "post-4",
+      "title": "グッズ抽選キャンペーン結果発表",
+      "platforms": ["Instagram", "X"],
+      "scheduledAt": "7/8 09:00",
+      "status": "published"
+    },
+    {
+      "id": "post-5",
+      "title": "スタジオ配信リマインド",
+      "platforms": ["LINE", "X"],
+      "scheduledAt": "7/14 15:00",
+      "status": "draft"
+    },
+    {
+      "id": "post-6",
+      "title": "場外発売所イベント告知（BTS横浜）",
+      "platforms": ["Instagram"],
+      "scheduledAt": "7/9 11:00",
+      "status": "published"
+    }
   ]
 }

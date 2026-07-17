@@ -6,6 +6,7 @@ import PortalPage from './pages/PortalPage';
 import DashboardPage from './pages/DashboardPage';
 import MarketingPage from './pages/MarketingPage';
 import KnowledgePage from './pages/KnowledgePage';
+import EventsPage from './pages/EventsPage';
 import AINotificationReportPage from './pages/AINotificationReportPage';
 
 export default function App() {
@@ -18,6 +19,7 @@ export default function App() {
             <Route path="dashboard" element={<DashboardPage />} />
             <Route path="marketing" element={<MarketingPage />} />
             <Route path="knowledge" element={<KnowledgePage />} />
+            <Route path="events" element={<EventsPage />} />
             <Route path="ai-notifications/:reportId" element={<AINotificationReportPage />} />
           </Route>
         </Routes>

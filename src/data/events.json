@@ -1,0 +1,66 @@
+{
+  "title": "AIイベント分析",
+  "description": "現地イベント・WEBイベントの実施効果をAIが分析し、次の企画への示唆を提示します。",
+  "kpis": [
+    { "label": "今月の実施イベント数", "value": "12件", "delta": { "direction": "up", "text": "▲ 3件 前月比" } },
+    { "label": "現地イベント動員数", "value": "3,840人", "delta": { "direction": "up", "text": "▲ 8.2% 前月比" } },
+    { "label": "WEBイベント視聴数", "value": "28,600回", "delta": { "direction": "up", "text": "▲ 14.5% 前月比" } },
+    { "label": "抽選会応募数", "value": "6,120件", "delta": { "direction": "up", "text": "▲ 6.1% 前月比" } },
+    { "label": "グッズ売上（イベント経由）", "value": "¥1,240,000", "delta": { "direction": "up", "text": "▲ 9.8% 前月比" } },
+    { "label": "SNS言及数（イベント関連）", "value": "2,180件", "delta": { "direction": "up", "text": "▲ 22% 前月比" } }
+  ],
+  "insights": [
+    { "icon": "trend-up", "badgeType": "analyze", "title": "現地トークショーの動員効果が高い", "description": "選手トークショーは費用対効果が高く、開催のたびに安定した動員が見込めます。" },
+    { "icon": "trend-up", "badgeType": "analyze", "title": "YouTubeライブの視聴数が増加", "description": "優勝戦のYouTubeライブ配信は視聴数が前月比で大きく伸びています。配信頻度の維持を推奨します。" },
+    { "icon": "users", "badgeType": "detect", "title": "抽選会応募とSNS拡散の相関", "description": "グッズ抽選キャンペーンの応募数はSNS上の言及数と強く相関しています。" },
+    { "icon": "trend-down", "badgeType": "detect", "title": "一部イベントの費用対効果が低下", "description": "平日開催のライブ配信は視聴数が伸び悩んでいます。開催曜日・時間帯の見直しを提案します。" },
+    { "icon": "megaphone", "badgeType": "suggest", "title": "アーカイブ再生の伸び", "description": "スタジオ配信のアーカイブ再生数が公開後も増加を続けています。アーカイブ導線の強化が有効です。" }
+  ],
+  "suggestions": [
+    { "text": "ナイターライブ形式のイベントを増やしてください", "actionLabel": "対応する", "toast": "イベント企画の作成は準備中の機能です" },
+    { "text": "スタジオ配信の頻度を週2回に増やすことを推奨します", "actionLabel": "対応する", "toast": "配信スケジュールの調整は準備中の機能です" },
+    { "text": "平日開催イベントの曜日・時間帯を見直してください", "actionLabel": "詳細を見る", "toast": "イベント効果レポートの作成は準備中の機能です" }
+  ],
+  "onsiteEvents": {
+    "title": "現地イベント",
+    "table": {
+      "columns": [
+        { "key": "name", "label": "イベント名" },
+        { "key": "type", "label": "種別" },
+        { "key": "date", "label": "実施日" },
+        { "key": "attendance", "label": "動員数", "align": "right" },
+        { "key": "cost", "label": "費用", "align": "right" },
+        { "key": "effect", "label": "効果" }
+      ],
+      "rows": [
+        { "name": "ナイターライブ", "type": "ライブ", "date": "6/28", "attendance": "920人", "cost": "¥650,000", "effect": "◎ 高い", "variant": "best" },
+        { "name": "選手トークショー", "type": "トークショー", "date": "6/21", "attendance": "580人", "cost": "¥180,000", "effect": "◎ 高い", "variant": "best" },
+        { "name": "商品交換抽選会", "type": "抽選会", "date": "6/15", "attendance": "410人", "cost": "¥95,000", "effect": "○ 良好" },
+        { "name": "SG開設記念トークショー", "type": "トークショー", "date": "6/10", "attendance": "340人", "cost": "¥140,000", "effect": "△ 平均的" },
+        { "name": "家族向けふれあいイベント", "type": "ライブ", "date": "6/8", "attendance": "260人", "cost": "¥120,000", "effect": "▼ 低い", "variant": "worst" }
+      ]
+    },
+    "comment": "ライブ・トークショー形式は費用対効果が高く、平日昼開催のイベントは動員が伸び悩む傾向があります。"
+  },
+  "webEvents": {
+    "title": "WEBイベント",
+    "table": {
+      "columns": [
+        { "key": "name", "label": "イベント名" },
+        { "key": "type", "label": "種別" },
+        { "key": "date", "label": "配信日" },
+        { "key": "reach", "label": "視聴・応募数", "align": "right" },
+        { "key": "cost", "label": "費用", "align": "right" },
+        { "key": "effect", "label": "効果" }
+      ],
+      "rows": [
+        { "name": "優勝戦YouTubeライブ配信", "type": "YouTubeライブ", "date": "6/29", "reach": "12,400回", "cost": "¥85,000", "effect": "◎ 高い", "variant": "best" },
+        { "name": "グッズ抽選キャンペーン", "type": "グッズ抽選", "date": "6/18", "reach": "6,120件", "cost": "¥60,000", "effect": "◎ 高い", "variant": "best" },
+        { "name": "スタジオトーク配信", "type": "スタジオ配信", "date": "6/22", "reach": "4,200回", "cost": "¥40,000", "effect": "○ 良好" },
+        { "name": "選手インタビュー配信", "type": "スタジオ配信", "date": "6/12", "reach": "2,100回", "cost": "¥35,000", "effect": "△ 平均的" },
+        { "name": "平日ナイターライブ配信", "type": "YouTubeライブ", "date": "6/5", "reach": "3,800回", "cost": "¥50,000", "effect": "▼ 低い", "variant": "worst" }
+      ]
+    },
+    "comment": "YouTubeライブとグッズ抽選の組み合わせが最も反応が良く、平日配信は視聴数が伸び悩む傾向があります。"
+  }
+}

@@ -36,6 +36,13 @@
       "to": "/marketing"
     },
     {
+      "icon": "calendar",
+      "title": "AIイベント分析",
+      "description": "現地イベント・WEBイベントの実施効果をAIが分析します。",
+      "badges": [{ "variant": "preview", "label": "Preview" }, { "variant": "version", "label": "Ver1.0" }, { "variant": "ai", "label": "AI分析" }],
+      "to": "/events"
+    },
+    {
       "icon": "sparkle",
       "title": "AIナレッジセンター",
       "description": "運営マニュアル・規程・就業規則をAIが検索します。",

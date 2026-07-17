@@ -3,6 +3,7 @@ import KPICard from '../components/KPICard';
 import AIInsightCard from '../components/AIInsightCard';
 import Table from '../components/Table';
 import RatingBadge from '../components/RatingBadge';
+import SNSPostCard from '../features/marketing/SNSPostCard';
 import { Icon } from '../components/icons';
 import { useToast } from '../components/ToastProvider';
 import ScopeIndicator from '../features/workspace/ScopeIndicator';
@@ -77,7 +78,7 @@ export default function MarketingPage() {
       </section>
 
       {/* 配信依頼 */}
-      <section className="mt-10 mb-4">
+      <section className="mt-10">
         <div className="flex items-baseline gap-2.5 mb-4">
           <h2 className="text-[13px] font-bold tracking-[2px] uppercase text-gray-500">配信依頼</h2>
           <div className="flex-1 h-px bg-gray-200" />
@@ -98,6 +99,22 @@ export default function MarketingPage() {
                 <p className="text-xs text-gray-500 leading-relaxed">{r.description}</p>
               </div>
             </button>
+          ))}
+        </div>
+      </section>
+
+      {/* SNS投稿管理 */}
+      <section className="mt-10 mb-4">
+        <div className="flex items-baseline gap-2.5 mb-4">
+          <h2 className="text-[13px] font-bold tracking-[2px] uppercase text-gray-500">SNS投稿管理</h2>
+          <div className="flex-1 h-px bg-gray-200" />
+        </div>
+        <p className="text-xs text-gray-500 mb-4">
+          プラットフォームをまたいだ投稿を、下書き→承認待ち→承認済み→配信済みの流れで管理します。
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {data.snsPosts.map((post) => (
+            <SNSPostCard key={post.id} post={post} />
           ))}
         </div>
       </section>

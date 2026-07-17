@@ -1,10 +1,11 @@
 import { NavLink } from 'react-router-dom';
-import { SparkleIcon, BarChartIcon, MegaphoneIcon, DocumentIcon, CloseIcon } from '../components/icons';
+import { SparkleIcon, BarChartIcon, MegaphoneIcon, DocumentIcon, CalendarIcon, CloseIcon } from '../components/icons';
 
 const NAV_ITEMS = [
   { to: '/', label: 'ABPポータル', icon: SparkleIcon, end: true },
   { to: '/dashboard', label: 'AI分析ダッシュボード', icon: BarChartIcon },
   { to: '/marketing', label: 'AIマーケティング', icon: MegaphoneIcon },
+  { to: '/events', label: 'AIイベント分析', icon: CalendarIcon },
   { to: '/knowledge', label: 'AIナレッジセンター', icon: DocumentIcon },
 ];
 
