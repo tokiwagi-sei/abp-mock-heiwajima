@@ -1,0 +1,284 @@
+{
+  "all": {
+    "title": "AI分析ダッシュボード",
+    "description": "AIが運営状況を要約し、原因分析と改善提案まで行います。詳細分析は必要な時だけ深掘りできます。",
+    "rating": {
+      "filledStars": 4,
+      "grade": "A",
+      "title": "AI経営診断",
+      "badge": "AI分析完了",
+      "metaSub": "最終分析　今日 5:00",
+      "lead": "AIが本場・場外発売所5拠点を分析した結果、現在最も注目すべき事項は以下の4点です。",
+      "pointsLabel": "注目ポイント",
+      "points": [
+        { "icon": "📈", "text": "本場・BTS横浜は好調に推移しています。" },
+        { "icon": "⚠", "text": "オラレ刈羽は来場者数が減少傾向です。" },
+        { "icon": "💰", "text": "インターネット投票の売上構成比が拡大しています。" },
+        { "icon": "📣", "text": "SNS配信を強化すると若年層来場の増加が期待できます。" }
+      ]
+    },
+    "kpis": [
+      { "label": "舟券売上", "value": "¥382,400,000", "delta": { "direction": "up", "text": "▲ 3.4% 前日比" } },
+      { "label": "来場者数", "value": "6,240人", "delta": { "direction": "up", "text": "▲ 2.1% 前日比" } },
+      { "label": "客単価", "value": "¥61,300", "delta": { "direction": "up", "text": "▲ 1.2% 前日比" } },
+      { "label": "前年差", "value": "+5.8%", "delta": { "direction": "up", "text": "▲ 前年同月比" } },
+      { "label": "予算比", "value": "106%", "delta": { "direction": "up", "text": "▲ 予算超過で推移" } },
+      { "label": "払戻率", "value": "74.8%", "delta": { "direction": "flat", "text": "－ 前日比横ばい" } }
+    ],
+    "insights": [
+      { "icon": "trend-down", "badgeType": "detect", "title": "来場者数が減少している拠点があります", "description": "オラレ刈羽が前年比88%を下回っています。周辺地域向けの販促強化を推奨します。" },
+      { "icon": "trend-up", "badgeType": "analyze", "title": "好調な拠点", "description": "本場・BTS横浜が前年比を大きく上回っています。番組編成の効果を分析中です。" },
+      { "icon": "users", "badgeType": "detect", "title": "インターネット投票が増加", "description": "インターネット投票経由の売上が前月比15%増加しました。専用アプリの利用が主要因です。" },
+      { "icon": "trend-down", "badgeType": "detect", "title": "払戻率の変動", "description": "一部レースで払戻率が想定を上回っています。番組編成係と連携し要因を確認中です。" },
+      { "icon": "calendar", "badgeType": "suggest", "title": "イベント効果", "description": "先週末のナイターレースイベントで来場者数が平均10%増加しました。今週末も実施を推奨します。" },
+      { "icon": "megaphone", "badgeType": "analyze", "title": "広告効果", "description": "SNS配信の来場貢献度が全チャネル中で最も高い結果です。配信頻度の維持を推奨します。" }
+    ],
+    "suggestions": [
+      { "text": "オラレ刈羽の販促を強化してください", "actionLabel": "対応する", "toast": "販促強化プランの作成は準備中の機能です" },
+      { "text": "本場・BTS横浜の成功事例を他拠点へ展開してください", "actionLabel": "詳細を見る", "toast": "成功事例レポートの作成は準備中の機能です" },
+      { "text": "SNS配信を推奨します", "actionLabel": "配信する", "to": "/marketing" },
+      { "text": "週末イベントを実施してください", "actionLabel": "企画する", "toast": "イベント企画の作成は準備中の機能です" }
+    ],
+    "drilldown": [
+      { "key": "sales", "label": "売上分析", "icon": "bar" },
+      { "key": "venues", "label": "拠点別比較", "icon": "store" },
+      { "key": "races", "label": "レース種別分析", "icon": "grid" },
+      { "key": "tickets", "label": "舟券種別分析", "icon": "percent" },
+      { "key": "channels", "label": "発売チャネル分析", "icon": "trend-up" },
+      { "key": "visitors", "label": "来場者分析", "icon": "users" },
+      { "key": "events", "label": "イベント分析", "icon": "calendar" },
+      { "key": "ads", "label": "広告分析", "icon": "megaphone" },
+      { "key": "detail", "label": "詳細分析", "icon": "document" }
+    ],
+    "details": {
+      "sales": {
+        "title": "週間売上推移（全拠点合計）",
+        "chart": {
+          "variant": "bar",
+          "data": [
+            { "label": "月", "value": 62 }, { "label": "火", "value": 70 }, { "label": "水", "value": 58 },
+            { "label": "木", "value": 80 }, { "label": "金", "value": 40, "highlight": "low" },
+            { "label": "土", "value": 95, "highlight": "high" }, { "label": "日", "value": 88, "highlight": "high" }
+          ]
+        },
+        "comment": "週末の売上構成比が全体の38%を占めています。平日ナイターの稼働率改善が次の伸びしろです。"
+      },
+      "venues": {
+        "title": "拠点別 売上ランキング",
+        "chart": {
+          "variant": "rank",
+          "data": [
+            { "label": "本場（ボートレース平和島）", "value": 210000000, "highlight": "high" },
+            { "label": "BTS横浜", "value": 68000000, "highlight": "high" },
+            { "label": "BTS河辺", "value": 42000000 },
+            { "label": "オラレ上越", "value": 31000000 },
+            { "label": "BTS黒石", "value": 18500000 },
+            { "label": "オラレ刈羽", "value": 12900000, "highlight": "low" }
+          ]
+        },
+        "comment": "本場が全体売上の55%を占めています。BTS横浜は前年比が特に高く、施策の横展開が有効です。"
+      },
+      "races": {
+        "title": "レース種別 売上比較",
+        "chart": {
+          "variant": "rank",
+          "data": [
+            { "label": "一般戦", "value": 168000000 },
+            { "label": "準優勝戦", "value": 74000000 },
+            { "label": "優勝戦", "value": 96000000, "highlight": "high" },
+            { "label": "SG・G1特別戦", "value": 44400000, "highlight": "high" }
+          ]
+        },
+        "comment": "優勝戦・SG特別戦は開催数が少ないものの、客単価が大きく伸びる傾向があります。"
+      },
+      "tickets": {
+        "title": "舟券種別 売上構成",
+        "chart": {
+          "variant": "rank",
+          "valueSuffix": "%",
+          "data": [
+            { "label": "3連単", "value": 45, "highlight": "high" },
+            { "label": "2連単", "value": 24 },
+            { "label": "3連複", "value": 14 },
+            { "label": "2連複", "value": 9 },
+            { "label": "複勝", "value": 5 },
+            { "label": "単勝", "value": 3 }
+          ]
+        },
+        "comment": "3連単が全体の45%を占め、主力の舟券種別です。"
+      },
+      "channels": {
+        "title": "発売チャネル別 売上構成",
+        "chart": {
+          "variant": "bar",
+          "data": [
+            { "label": "窓口", "value": 18 },
+            { "label": "自動発売機", "value": 26 },
+            { "label": "電話投票", "value": 20 },
+            { "label": "ネット投票", "value": 36, "highlight": "high" }
+          ]
+        },
+        "comment": "インターネット投票の構成比が年々拡大しており、現在は全体の36%を占めます。"
+      },
+      "visitors": {
+        "title": "拠点別 来場者数",
+        "chart": {
+          "variant": "rank",
+          "valueSuffix": "人",
+          "data": [
+            { "label": "本場（ボートレース平和島）", "value": 4850, "highlight": "high" },
+            { "label": "BTS横浜", "value": 980 },
+            { "label": "BTS河辺", "value": 610 },
+            { "label": "オラレ上越", "value": 420 },
+            { "label": "BTS黒石", "value": 260 },
+            { "label": "オラレ刈羽", "value": 190, "highlight": "low" }
+          ]
+        },
+        "comment": "本場の来場者が全体の約78%を占めています。場外発売所は近隣地域からの来場が中心です。"
+      },
+      "events": {
+        "title": "イベント費用対効果",
+        "table": {
+          "columns": [
+            { "key": "name", "label": "イベント名" },
+            { "key": "date", "label": "実施日" },
+            { "key": "cost", "label": "費用", "align": "right" },
+            { "key": "gain", "label": "来場増加数", "align": "right" },
+            { "key": "effect", "label": "費用対効果" }
+          ],
+          "rows": [
+            { "name": "ナイターレース特別イベント", "date": "6/28-29", "cost": "¥420,000", "gain": "+680人", "effect": "◎ 高い", "variant": "best" },
+            { "name": "選手トークショー", "date": "6/21", "cost": "¥180,000", "gain": "+310人", "effect": "○ 良好" },
+            { "name": "SG開設記念協賛イベント", "date": "6/14-15", "cost": "¥560,000", "gain": "+420人", "effect": "△ 平均的" },
+            { "name": "平日限定来場者プレゼント", "date": "6/10", "cost": "¥120,000", "gain": "+45人", "effect": "▼ 低い", "variant": "worst" }
+          ]
+        },
+        "comment": "ナイターレース特別イベントが最も費用対効果が高い傾向です。今後も同形式の実施を推奨します。"
+      },
+      "ads": {
+        "title": "チャネル別 来場貢献ランキング",
+        "chart": {
+          "variant": "rank",
+          "valueSuffix": "人",
+          "data": [
+            { "label": "SNS（X・Instagram）", "value": 1240, "highlight": "high" },
+            { "label": "公式アプリ通知", "value": 890 },
+            { "label": "YouTube", "value": 540 },
+            { "label": "Google", "value": 410 },
+            { "label": "DM", "value": 260 }
+          ]
+        }
+      },
+      "detail": {
+        "title": "拠点横断データテーブル",
+        "table": {
+          "columns": [
+            { "key": "name", "label": "拠点名" },
+            { "key": "sales", "label": "売上", "align": "right" },
+            { "key": "visitors", "label": "来場者数", "align": "right" },
+            { "key": "unitPrice", "label": "客単価", "align": "right" },
+            { "key": "yoy", "label": "前年比", "align": "right" },
+            { "key": "budget", "label": "予算比", "align": "right" },
+            { "key": "comment", "label": "AIコメント" }
+          ],
+          "rows": [
+            { "name": "本場（ボートレース平和島）", "sales": "¥210,000,000", "visitors": "4,850人", "unitPrice": "¥43,300", "yoy": "106.2%", "budget": "107%", "comment": "堅調に推移", "variant": "best" },
+            { "name": "BTS横浜", "sales": "¥68,000,000", "visitors": "980人", "unitPrice": "¥69,400", "yoy": "109.1%", "budget": "110%", "comment": "好調を維持", "variant": "best" },
+            { "name": "BTS河辺", "sales": "¥42,000,000", "visitors": "610人", "unitPrice": "¥68,900", "yoy": "99.2%", "budget": "98%", "comment": "横ばいで推移" },
+            { "name": "オラレ上越", "sales": "¥31,000,000", "visitors": "420人", "unitPrice": "¥73,800", "yoy": "102.5%", "budget": "101%", "comment": "安定して推移" },
+            { "name": "BTS黒石", "sales": "¥18,500,000", "visitors": "260人", "unitPrice": "¥71,200", "yoy": "95.8%", "budget": "94%", "comment": "やや弱含み" },
+            { "name": "オラレ刈羽", "sales": "¥12,900,000", "visitors": "190人", "unitPrice": "¥67,900", "yoy": "88.2%", "budget": "86%", "comment": "要改善", "variant": "worst" }
+          ]
+        }
+      }
+    }
+  },
+  "venue": {
+    "title": "AI分析ダッシュボード｜拠点別",
+    "description": "本場および場外発売所5拠点の実績を、拠点ごとに確認できます。",
+    "locations": [
+      {
+        "id": "honba",
+        "name": "本場（ボートレース平和島）",
+        "kpis": [
+          { "label": "売上", "value": "¥210,000,000", "delta": { "direction": "up", "text": "▲ 4.1% 前年比" } },
+          { "label": "来場者数", "value": "4,850人", "delta": { "direction": "up", "text": "▲ 3.2% 前年比" } },
+          { "label": "客単価", "value": "¥43,300", "delta": { "direction": "up", "text": "▲ 0.8% 前年比" } },
+          { "label": "前年差", "value": "+6.2%", "delta": { "direction": "up", "text": "▲ 前年同月比" } }
+        ],
+        "insights": [
+          { "icon": "trend-up", "badgeType": "analyze", "title": "ナイターレースが好調", "description": "番組編成の効果でナイターレースの来場者が増加しています。" },
+          { "icon": "megaphone", "badgeType": "suggest", "title": "SNS経由の来場が増加", "description": "SNS配信経由の来場が伸びており、若年層への訴求が効果を上げています。" }
+        ]
+      },
+      {
+        "id": "bts-yokohama",
+        "name": "BTS横浜",
+        "kpis": [
+          { "label": "売上", "value": "¥68,000,000", "delta": { "direction": "up", "text": "▲ 7.8% 前年比" } },
+          { "label": "来場者数", "value": "980人", "delta": { "direction": "up", "text": "▲ 5.1% 前年比" } },
+          { "label": "客単価", "value": "¥69,400", "delta": { "direction": "up", "text": "▲ 2.4% 前年比" } },
+          { "label": "前年差", "value": "+9.1%", "delta": { "direction": "up", "text": "▲ 前年同月比" } }
+        ],
+        "insights": [
+          { "icon": "trend-up", "badgeType": "analyze", "title": "都市部からのアクセスの良さ", "description": "都市部からのアクセスの良さを活かし、平日来場が堅調です。" },
+          { "icon": "users", "badgeType": "suggest", "title": "ネット投票との相乗効果", "description": "インターネット投票との相乗効果が見られ、客単価も上昇しています。" }
+        ]
+      },
+      {
+        "id": "bts-kawabe",
+        "name": "BTS河辺",
+        "kpis": [
+          { "label": "売上", "value": "¥42,000,000", "delta": { "direction": "down", "text": "▼ 1.2% 前年比" } },
+          { "label": "来場者数", "value": "610人", "delta": { "direction": "flat", "text": "－ 前年比横ばい" } },
+          { "label": "客単価", "value": "¥68,900", "delta": { "direction": "down", "text": "▼ 0.5% 前年比" } },
+          { "label": "前年差", "value": "-0.8%", "delta": { "direction": "down", "text": "▼ 前年同月比" } }
+        ],
+        "insights": [
+          { "icon": "trend-down", "badgeType": "detect", "title": "来場者数は横ばい", "description": "来場者数はほぼ横ばいで安定的に推移しています。" },
+          { "icon": "trend-down", "badgeType": "analyze", "title": "客単価がやや低下", "description": "客単価がやや低下傾向にあり、施策の検討余地があります。" }
+        ]
+      },
+      {
+        "id": "orale-joetsu",
+        "name": "オラレ上越",
+        "kpis": [
+          { "label": "売上", "value": "¥31,000,000", "delta": { "direction": "up", "text": "▲ 2.0% 前年比" } },
+          { "label": "来場者数", "value": "420人", "delta": { "direction": "up", "text": "▲ 1.5% 前年比" } },
+          { "label": "客単価", "value": "¥73,800", "delta": { "direction": "up", "text": "▲ 1.1% 前年比" } },
+          { "label": "前年差", "value": "+2.5%", "delta": { "direction": "up", "text": "▲ 前年同月比" } }
+        ],
+        "insights": [
+          { "icon": "calendar", "badgeType": "suggest", "title": "地域イベントとの連携", "description": "地域イベントとの連携で来場者が増加しています。" },
+          { "icon": "trend-up", "badgeType": "analyze", "title": "客単価は平均的な水準", "description": "客単価は平均的な水準で安定的に推移しています。" }
+        ]
+      },
+      {
+        "id": "bts-kuroishi",
+        "name": "BTS黒石",
+        "kpis": [
+          { "label": "売上", "value": "¥18,500,000", "delta": { "direction": "down", "text": "▼ 3.4% 前年比" } },
+          { "label": "来場者数", "value": "260人", "delta": { "direction": "down", "text": "▼ 2.8% 前年比" } },
+          { "label": "客単価", "value": "¥71,200", "delta": { "direction": "down", "text": "▼ 1.0% 前年比" } },
+          { "label": "前年差", "value": "-4.2%", "delta": { "direction": "down", "text": "▼ 前年同月比" } }
+        ],
+        "insights": [
+          { "icon": "trend-down", "badgeType": "detect", "title": "来場者数・売上ともに減少", "description": "来場者数・売上ともに減少傾向が続いています。周辺地域向けの販促強化を推奨します。" }
+        ]
+      },
+      {
+        "id": "orale-kariwa",
+        "name": "オラレ刈羽",
+        "kpis": [
+          { "label": "売上", "value": "¥12,900,000", "delta": { "direction": "down", "text": "▼ 8.6% 前年比" } },
+          { "label": "来場者数", "value": "190人", "delta": { "direction": "down", "text": "▼ 9.5% 前年比" } },
+          { "label": "客単価", "value": "¥67,900", "delta": { "direction": "down", "text": "▼ 2.1% 前年比" } },
+          { "label": "前年差", "value": "-11.8%", "delta": { "direction": "down", "text": "▼ 前年同月比" } }
+        ],
+        "insights": [
+          { "icon": "trend-down", "badgeType": "detect", "title": "前年比が大きく下回っています", "description": "前年比が大きく下回っています。原因分析と施策の見直しが必要です。" }
+        ]
+      }
+    ]
+  }
+}

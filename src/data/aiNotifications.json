@@ -1,0 +1,66 @@
+{
+  "summary": {
+    "title": "AI通知センター",
+    "mainNotice": "運営マニュアルに確認事項があります（サンプル）",
+    "subText": "AIが登録資料を確認した結果、表記ゆれ・記載差異の可能性を検出しました。",
+    "pendingCount": 2,
+    "severity": "中",
+    "ctaLabel": "レポートを見る",
+    "reportId": "sample-report"
+  },
+  "reports": {
+    "sample-report": {
+      "title": "AI解析レポート",
+      "target": "運営マニュアル確認（サンプル）",
+      "leadText": "この画面は「AIが資料を横断確認し、根拠を示して報告する」という体験のサンプルです。実際の運営規程・マニュアルを登録すると、同じ形式で確認事項が自動的に整理されます。",
+      "status": "サンプル表示",
+      "createdAt": "登録データに応じて自動生成",
+      "verdict": {
+        "analysisTarget": "運営マニュアル・規程（サンプル）",
+        "resultCounts": [
+          { "emoji": "🔴", "label": "要確認", "count": 1, "tone": "critical" },
+          { "emoji": "🟡", "label": "表記ゆれ疑い", "count": 1, "tone": "ocr" },
+          { "emoji": "🟠", "label": "拠点差異", "count": 1, "tone": "diff" },
+          { "emoji": "⚪", "label": "判断不可", "count": 0, "tone": "unknown" }
+        ],
+        "comment": "これはサンプル表示です。実際の運営マニュアル・規程をAIが確認すると、比較元・比較先・判断理由を示した確認事項がここに自動的に整理されます。"
+      },
+      "criticalIssues": [
+        {
+          "id": "critical-1",
+          "store": "本場（例）",
+          "topic": "資料内の表記統一（例）",
+          "severity": "中",
+          "detection": "これはサンプル表示です。実際の資料をAIが比較すると、ここに検出内容の詳細が表示されます。",
+          "comparison": [
+            { "label": "資料A（例）", "value": "記載内容の例" },
+            { "label": "資料B（例）", "value": "記載内容の例" }
+          ],
+          "reasoning": "AIが根拠として提示する比較結果・判断理由がここに表示されます。",
+          "recommendedAction": "実際の運用では、担当部署への確認要否がここに表示されます。"
+        }
+      ],
+      "ocrIssues": [
+        {
+          "id": "ocr-1",
+          "target": "拠点表記（例）",
+          "detected": "「サンプル表記A」",
+          "estimate": "「サンプル表記B」との統一が必要な可能性（例）",
+          "reasoning": "実際の資料をAIが比較すると、ここに具体的な判断根拠が表示されます。"
+        }
+      ],
+      "storeDifferences": [
+        {
+          "id": "diff-1",
+          "topic": "拠点間の運用差異（例）",
+          "comparison": [
+            { "label": "拠点A（例）", "value": "運用ルールの例" },
+            { "label": "拠点B（例）", "value": "運用ルールの例" }
+          ],
+          "comment": "実際の運用では、拠点間の差異がここに整理されます。"
+        }
+      ],
+      "unknownIssues": []
+    }
+  }
+}

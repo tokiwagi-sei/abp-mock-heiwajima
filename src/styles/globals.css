@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+/* ============================================================
+   ABP Design Tokens
+   Enterprise SaaS: Apple の余白 / Linear の洗練 / Stripe の高級感 / Notion の読みやすさ
+   ネイビー基調 + ブルーアクセント。ダークテーマは採用しない。
+   ============================================================ */
+
+@theme {
+  /* --- Brand: navy (メインカラー) --- */
+  --color-navy-950: #06091b;
+  --color-navy-900: #0a1330;
+  --color-navy-800: #101c3f;
+  --color-navy-700: #172a5c;
+  --color-navy-600: #223b7a;
+  --color-navy-500: #2f4f9e;
+  --color-navy-100: #e6eaf5;
+  --color-navy-50: #f2f4fb;
+
+  /* --- Accent: blue (アクセント) --- */
+  --color-accent-700: #1d4ed8;
+  --color-accent-600: #2563eb;
+  --color-accent-500: #3b82f6;
+  --color-accent-400: #60a5fa;
+  --color-accent-100: #dbeafe;
+  --color-accent-50: #eff6ff;
+
+  /* --- Semantic --- */
+  --color-success-600: #157a4a;
+  --color-success-500: #1f9d6c;
+  --color-success-50: #e8f7f0;
+
+  --color-warning-600: #a8650f;
+  --color-warning-500: #c98420;
+  --color-warning-50: #fbf1e1;
+
+  --color-danger-600: #a83232;
+  --color-danger-500: #cf4646;
+  --color-danger-50: #fbebeb;
+
+  /* --- Neutral --- */
+  --color-gray-25: #fafbfc;
+  --color-gray-50: #f5f6f8;
+  --color-gray-100: #edeff3;
+  --color-gray-200: #e1e4ea;
+  --color-gray-300: #c9ced8;
+  --color-gray-400: #9ca3b0;
+  --color-gray-500: #71788a;
+  --color-gray-600: #565d6f;
+  --color-gray-700: #3c4152;
+  --color-gray-800: #262a37;
+  --color-gray-900: #14161d;
+
+  /* --- Radius (12-16px, 角丸カード) --- */
+  --radius-card-sm: 10px;
+  --radius-card: 14px;
+  --radius-card-lg: 16px;
+
+  /* --- Shadow (薄いシャドウ + 軽いガラス感) --- */
+  --shadow-card-sm: 0 1px 2px rgba(16, 24, 40, 0.05);
+  --shadow-card: 0 6px 20px rgba(16, 24, 40, 0.06), 0 1px 2px rgba(16, 24, 40, 0.04);
+  --shadow-card-lg: 0 20px 45px rgba(10, 19, 48, 0.12);
+  --shadow-glass: 0 8px 28px rgba(15, 23, 42, 0.07), inset 0 1px 0 rgba(255, 255, 255, 0.7);
+
+  /* --- Spacing scale additions (Apple 風の余白) --- */
+  --spacing-18: 4.5rem;
+  --spacing-22: 5.5rem;
+
+  /* --- Font --- */
+  --font-sans: "Yu Gothic Medium", "Yu Gothic", "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans", Meiryo, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    @apply bg-gray-25 text-gray-800 antialiased;
+    font-family: var(--font-sans);
+  }
+
+  * {
+    @apply border-gray-200;
+  }
+}
+
+@layer components {
+  /* 軽いガラス感を持つカード（透明度は控えめ） */
+  .glass-card {
+    @apply bg-white/90 backdrop-blur-sm border border-gray-200 rounded-card shadow-card;
+  }
+
+  /* フォーカスリング（アクセシビリティ + ブルーアクセント統一） */
+  .focus-ring {
+    @apply outline-none focus-visible:ring-2 focus-visible:ring-accent-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white;
+  }
+}

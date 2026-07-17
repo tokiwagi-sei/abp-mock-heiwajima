@@ -1,0 +1,67 @@
+{
+  "hero": {
+    "kicker": "ABP",
+    "title": "AI Business Platform",
+    "sub": "経営・業務・ナレッジをAIでひとつにつなぐ",
+    "subSupport": "経営判断をAIがサポートします。"
+  },
+  "assistant": {
+    "greeting": "おはようございます。<br/>本日確認いただきたい事項が3件あります。",
+    "items": [
+      { "dot": "warn", "title": "来場者数が減少している拠点があります", "badge": "AI検知", "meta": "対象：オラレ刈羽・BTS黒石", "actionLabel": "確認する", "to": "/dashboard" },
+      { "dot": "good", "title": "BTS横浜の客単価が9%増加しています", "badge": "AI分析", "actionLabel": "分析する", "to": "/dashboard" },
+      { "dot": "info", "title": "月次運営レポートを生成できます", "badge": "AI生成", "actionLabel": "作成する", "toast": "月次運営レポートの自動生成は準備中の機能です" }
+    ],
+    "footerActionLabel": "AI分析ダッシュボードを開く"
+  },
+  "quickActions": [
+    { "icon": "bar", "label": "今月の売上を確認する", "to": "/dashboard" },
+    { "icon": "document", "label": "運営レポートを作成する", "toast": "月次レポートの自動生成は準備中の機能です" },
+    { "icon": "alert", "label": "来場者数減少拠点を確認する", "to": "/dashboard" },
+    { "icon": "search", "label": "規程・マニュアルを検索する", "toast": "規程・マニュアルの検索は準備中の機能です（Preview）" }
+  ],
+  "availableFeatures": [
+    {
+      "icon": "bar",
+      "title": "AI分析ダッシュボード",
+      "description": "売上・来場者数・拠点実績をAIが分析し、改善ポイントを提案します。",
+      "badges": [{ "variant": "available", "label": "利用可能" }, { "variant": "version", "label": "Ver1.0" }, { "variant": "ai", "label": "AI分析中" }],
+      "to": "/dashboard"
+    },
+    {
+      "icon": "megaphone",
+      "title": "AIマーケティング",
+      "description": "SNS・LINE・DM・広告配信・販促施策をAIが支援します。",
+      "badges": [{ "variant": "preview", "label": "Preview" }, { "variant": "version", "label": "Ver1.0" }, { "variant": "ai", "label": "AI販促" }],
+      "to": "/marketing"
+    },
+    {
+      "icon": "sparkle",
+      "title": "AIナレッジセンター",
+      "description": "運営マニュアル・規程・就業規則をAIが検索します。",
+      "badges": [{ "variant": "preview", "label": "Preview" }, { "variant": "version", "label": "Ver1.0" }, { "variant": "ai", "label": "AI検索" }],
+      "to": "/knowledge"
+    }
+  ],
+  "aiEmployee": {
+    "title": "AI社員",
+    "description": "売上・案件・KPI・日報などをもとに、業務相談や改善提案を行うABP内のAI社員です。",
+    "badges": [{ "variant": "soon", "label": "準備中" }, { "variant": "ai", "label": "AI Business Partner" }],
+    "actionLabel": "AI社員に相談する",
+    "caption": "※現在は入口のみ。機能は今後追加予定です。",
+    "dialogTitle": "AI社員は準備中です",
+    "dialogDescription": "AI社員機能は現在準備中です。将来的に、売上・案件・KPI・日報などのデータをもとに業務相談ができるようになります。"
+  },
+  "upcomingFeatures": [
+    { "icon": "wrench", "title": "業務管理", "description": "改修工事・タスク・進捗管理" },
+    { "icon": "grid", "title": "番組編成・選手あっせん管理", "description": "番組編成・選手あっせん・賞金管理" },
+    { "icon": "alert", "title": "場内警備・安全管理", "description": "場内警備・安全管理・従事員労務" },
+    { "icon": "cabinet", "title": "施設・設備管理", "description": "施設維持管理・スタンド整備・改修計画" },
+    { "icon": "users", "title": "人事・査定管理", "description": "従業員評価・面談・育成管理" },
+    { "icon": "document", "title": "就業規則・法令管理", "description": "法改正チェック・規程更新支援" }
+  ],
+  "settings": {
+    "title": "設定",
+    "description": "組織別・部課別・権限管理"
+  }
+}

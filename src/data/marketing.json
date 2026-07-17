@@ -1,0 +1,53 @@
+{
+  "title": "AIマーケティング",
+  "description": "SNS・LINE・DM・広告配信・販促施策をAIが分析・支援します。",
+  "summary": {
+    "rating": { "filledStars": 4, "grade": "B+" },
+    "kpis": [
+      { "label": "広告費（今月）", "value": "¥620,000", "delta": { "direction": "up", "text": "▲ 4.2% 前月比" } },
+      { "label": "CPA", "value": "¥1,240", "delta": { "direction": "down", "text": "▼ 3.1% 改善" } },
+      { "label": "ROAS", "value": "412%", "delta": { "direction": "up", "text": "▲ 18pt 前月比" } },
+      { "label": "来場者数（広告経由）", "value": "1,860人", "delta": { "direction": "up", "text": "▲ 6.5% 前月比" } }
+    ]
+  },
+  "todayTasks": [
+    { "priority": 1, "channel": "LINE", "task": "週末イベントの告知配信", "status": "未着手" },
+    { "priority": 2, "channel": "Instagram", "task": "レース開催告知の投稿作成", "status": "下書き中" },
+    { "priority": 3, "channel": "Google広告", "task": "予算消化ペースの確認", "status": "確認待ち" },
+    { "priority": 4, "channel": "Yahoo広告", "task": "クリエイティブの差し替え", "status": "未着手" },
+    { "priority": 5, "channel": "DM", "task": "休眠会員向けDM原稿レビュー", "status": "レビュー中" },
+    { "priority": 6, "channel": "チラシ", "task": "来月分の版下確認", "status": "未着手" }
+  ],
+  "insights": [
+    { "icon": "trend-down", "badgeType": "detect", "title": "LINE配信が不足しています", "description": "直近2週間、LINE配信の頻度が目標を下回っています。配信頻度を週2回に戻すことを推奨します。" },
+    { "icon": "trend-up", "badgeType": "analyze", "title": "Instagram経由の来場が増加", "description": "Instagram経由の来場が前月比22%増加しました。リール動画の反応が特に良好です。" },
+    { "icon": "megaphone", "badgeType": "suggest", "title": "Google広告の予算再配分", "description": "CPAが悪化している検索語句があります。予算の一部をディスプレイ広告へ再配分することを提案します。" },
+    { "icon": "users", "badgeType": "analyze", "title": "休眠会員へのDM効果", "description": "先月のDM施策で休眠会員の8%が来場に至りました。継続実施を推奨します。" }
+  ],
+  "channelPerformance": {
+    "columns": [
+      { "key": "channel", "label": "チャネル" },
+      { "key": "cpa", "label": "CPA", "align": "right" },
+      { "key": "roas", "label": "ROAS", "align": "right" },
+      { "key": "cv", "label": "CV", "align": "right" },
+      { "key": "ctr", "label": "CTR", "align": "right" },
+      { "key": "visits", "label": "来場者数", "align": "right" }
+    ],
+    "rows": [
+      { "channel": "LINE", "cpa": "¥620", "roas": "580%", "cv": "410", "ctr": "3.8%", "visits": "820人", "variant": "best" },
+      { "channel": "Google", "cpa": "¥1,180", "roas": "390%", "cv": "290", "ctr": "2.1%", "visits": "640人" },
+      { "channel": "Yahoo", "cpa": "¥1,340", "roas": "340%", "cv": "180", "ctr": "1.8%", "visits": "410人" },
+      { "channel": "Meta", "cpa": "¥1,050", "roas": "410%", "cv": "230", "ctr": "2.4%", "visits": "520人" },
+      { "channel": "Instagram", "cpa": "¥980", "roas": "430%", "cv": "260", "ctr": "2.9%", "visits": "520人" },
+      { "channel": "TikTok", "cpa": "¥1,410", "roas": "310%", "cv": "140", "ctr": "3.2%", "visits": "260人" },
+      { "channel": "X", "cpa": "¥1,520", "roas": "260%", "cv": "95", "ctr": "1.4%", "visits": "180人" },
+      { "channel": "DM", "cpa": "¥2,100", "roas": "220%", "cv": "70", "ctr": "—", "visits": "310人", "variant": "worst" }
+    ]
+  },
+  "requestCards": [
+    { "icon": "chat", "title": "LINE配信", "description": "セグメント配信・一斉配信の依頼", "toast": "LINE配信依頼フォームは準備中の機能です" },
+    { "icon": "sparkle", "title": "SNS投稿", "description": "Instagram・X投稿の作成依頼", "toast": "SNS投稿依頼フォームは準備中の機能です" },
+    { "icon": "megaphone", "title": "広告素材作成", "description": "画像・動画・コピー生成の依頼", "toast": "広告素材生成は準備中の機能です" },
+    { "icon": "document", "title": "DM作成", "description": "紙面DM・デジタルDMの依頼", "toast": "DM作成依頼フォームは準備中の機能です" }
+  ]
+}
