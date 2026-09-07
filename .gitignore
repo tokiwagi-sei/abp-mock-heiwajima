@@ -22,3 +22,15 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+# Vercel CLI のローカルリンク情報（projectId/orgId）。共有しない。
+.vercel
+
+# 環境変数：実値は一切Git管理しない。
+#   ★共有用テンプレート（.env.example / .env.<環境>.example）だけ追跡する。
+#     テンプレートにはキー名と説明のみを書き、値は空にしておくこと。
+#   ★`.env*` 一括除外だと .env.example まで無視され、テンプレートを共有できない。
+#     そのため実値（.env / .env.*）を除外したうえで、.example だけ否定で戻している。
+.env
+.env.*
+!.env.example
+!.env.*.example
